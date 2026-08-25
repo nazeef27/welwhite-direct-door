@@ -111,29 +111,124 @@
   h3,
   h4 {
     font-family: var(--font-display);
-    letter-spacing: -0.015em;
+    letter-spacing: -0.02em;
+    font-weight: 500;
+    text-wrap: balance;
+  }
+
+  h1 {
+    letter-spacing: -0.032em;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  ::selection {
+    background: color-mix(in oklab, var(--gold) 22%, transparent);
+    color: var(--primary);
   }
 }
 
 @utility eyebrow {
-  font-size: 0.7rem;
-  letter-spacing: 0.22em;
+  font-size: 0.68rem;
+  letter-spacing: 0.26em;
   text-transform: uppercase;
   font-weight: 500;
 }
 
+/* Small gold rule used beside section labels */
+@utility eyebrow-rule {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+
+  &::before {
+    content: "";
+    width: 1.75rem;
+    height: 1px;
+    background: linear-gradient(
+      to right,
+      transparent,
+      color-mix(in oklab, var(--gold) 70%, transparent)
+    );
+  }
+}
+
+@utility eyebrow-rule-center {
+  &::after {
+    content: "";
+    width: 1.75rem;
+    height: 1px;
+    background: linear-gradient(
+      to left,
+      transparent,
+      color-mix(in oklab, var(--gold) 70%, transparent)
+    );
+  }
+}
+
+/* Refined hairline card surface */
+@utility card-fine {
+  border: 1px solid color-mix(in oklab, var(--border) 85%, transparent);
+  background: var(--card);
+  box-shadow: var(--shadow-hairline);
+  transition:
+    box-shadow 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.45s ease;
+
+  &:hover {
+    border-color: color-mix(in oklab, var(--gold) 32%, var(--border));
+    box-shadow: var(--shadow-lift);
+  }
+}
+
+/* Premium button base */
+@utility btn-premium {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  transition:
+    background-color 0.35s ease,
+    color 0.35s ease,
+    box-shadow 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+
+  &:hover {
+    transform: translateY(-1px);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+/* Hairline gold divider between sections */
+@utility rule-gold {
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    color-mix(in oklab, var(--gold) 45%, transparent),
+    transparent
+  );
+}
+
 @utility reveal {
   opacity: 0;
-  transform: translateY(18px);
+  transform: translateY(14px);
   transition:
-    opacity 0.8s ease,
-    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+    opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
 
   &.is-visible {
     opacity: 1;
     transform: none;
   }
 }
+
 
 @media (prefers-reduced-motion: reduce) {
   .reveal {
