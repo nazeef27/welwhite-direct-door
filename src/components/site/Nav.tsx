@@ -12,6 +12,7 @@ const links = [
 ];
 
 export const WHATSAPP = "https://wa.me/919542793470";
+export const EMAIL = "abdulghaninazeef27@gmail.com";
 
 export function Nav() {
   const [scrolled, setScrolled] = useState(false);
