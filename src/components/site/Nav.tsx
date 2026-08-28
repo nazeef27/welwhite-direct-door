@@ -27,18 +27,24 @@ export function Nav() {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
+      className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "border-b border-border/80 bg-cream-soft/95 backdrop-blur-md shadow-soft"
+          ? "border-b border-border/70 bg-cream-soft/95 shadow-hairline backdrop-blur-md"
           : "border-b border-transparent bg-cream-soft/40 backdrop-blur-sm"
       }`}
     >
-      <nav className="mx-auto grid max-w-7xl grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-5 py-3 lg:px-10">
+      <nav
+        className={`mx-auto grid max-w-7xl grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-5 transition-all duration-500 sm:px-6 lg:px-10 ${
+          scrolled ? "py-2.5" : "py-3.5"
+        }`}
+      >
         <a href="#home" className="flex min-w-0 items-center gap-3">
           <img
             src={logo.url}
             alt="Welwhite — farm fresh raw milk"
-            className="h-11 w-auto shrink-0 sm:h-12"
+            className={`w-auto shrink-0 transition-all duration-500 ${
+              scrolled ? "h-10 sm:h-11" : "h-11 sm:h-13"
+            }`}
             width={160}
             height={120}
           />
@@ -51,7 +57,7 @@ export function Nav() {
               <li key={l.href}>
                 <a
                   href={l.href}
-                  className="relative text-sm font-medium text-foreground/80 transition-colors hover:text-primary after:absolute after:-bottom-1.5 after:left-0 after:h-px after:w-0 after:bg-gold after:transition-all hover:after:w-full"
+                  className="relative text-[0.82rem] font-medium uppercase tracking-[0.11em] text-foreground/75 transition-colors duration-300 hover:text-primary after:absolute after:-bottom-1.5 after:left-0 after:h-px after:w-0 after:bg-gold after:transition-all after:duration-300 hover:after:w-full"
                 >
                   {l.label}
                 </a>
@@ -62,7 +68,7 @@ export function Nav() {
             href={WHATSAPP}
             target="_blank"
             rel="noopener noreferrer"
-            className="ml-4 hidden rounded-lg bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground shadow-soft transition-colors hover:bg-secondary sm:inline-flex"
+            className="btn-premium ml-5 hidden rounded-xl bg-primary px-5 py-2.5 text-sm font-medium tracking-wide text-primary-foreground shadow-soft hover:bg-secondary hover:shadow-lift sm:inline-flex"
           >
             Order / Enquire
           </a>
@@ -71,7 +77,7 @@ export function Nav() {
             aria-label={open ? "Close menu" : "Open menu"}
             aria-expanded={open}
             onClick={() => setOpen((v) => !v)}
-            className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-lg border border-border text-primary lg:hidden"
+            className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-border text-primary transition-colors hover:border-gold/40 hover:bg-gold/5 lg:hidden"
           >
             {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
@@ -80,7 +86,8 @@ export function Nav() {
 
       {open && (
         <div className="border-t border-border bg-cream-soft lg:hidden">
-          <ul className="mx-auto max-w-7xl px-5 py-3">
+          <ul className="mx-auto max-w-7xl px-5 py-2 sm:px-6">
+
             {links.map((l) => (
               <li key={l.href}>
                 <a
