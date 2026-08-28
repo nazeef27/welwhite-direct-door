@@ -87,30 +87,39 @@ export function Nav() {
       {open && (
         <div className="border-t border-border bg-cream-soft lg:hidden">
           <ul className="mx-auto max-w-7xl px-5 py-2 sm:px-6">
-
             {links.map((l) => (
               <li key={l.href}>
                 <a
                   href={l.href}
                   onClick={() => setOpen(false)}
-                  className="block border-b border-border/60 py-3.5 text-base font-medium text-foreground/85"
+                  className="block border-b border-border/50 py-3.5 text-[0.95rem] font-medium tracking-wide text-foreground/85 transition-colors hover:text-gold"
                 >
                   {l.label}
                 </a>
               </li>
             ))}
-            <li className="pt-4 pb-2">
+            <li className="pt-5 pb-2">
               <a
                 href={WHATSAPP}
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setOpen(false)}
-                className="block rounded-lg bg-primary px-5 py-3 text-center text-sm font-medium text-primary-foreground"
+                className="block rounded-xl bg-primary px-5 py-3.5 text-center text-sm font-medium tracking-wide text-primary-foreground shadow-soft"
               >
                 Order / Enquire
               </a>
             </li>
+            <li className="pb-4 text-center">
+              <a
+                href={`mailto:${EMAIL}`}
+                onClick={() => setOpen(false)}
+                className="mt-3 inline-block break-all text-xs text-muted-foreground transition-colors hover:text-gold"
+              >
+                {EMAIL}
+              </a>
+            </li>
           </ul>
+
         </div>
       )}
     </header>
