@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import { FileText, Loader2 } from "lucide-react";
+import { ArrowRight, FileText, Loader2 } from "lucide-react";
 
 import { Nav } from "@/components/site/Nav";
 import { Reveal } from "@/components/site/Reveal";
@@ -167,7 +167,7 @@ function LabReportsPage() {
                         rel="noopener noreferrer"
                         className="btn-premium inline-flex items-center gap-2 rounded-xl bg-primary px-7 py-3 text-sm font-medium text-primary-foreground shadow-soft hover:bg-secondary"
                       >
-                        View Report
+                        Click here to view Lab Report <ArrowRight className="h-4 w-4" />
                       </a>
                     </>
                   )}
