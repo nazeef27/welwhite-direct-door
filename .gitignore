@@ -20,6 +20,9 @@ dist-ssr
 .wrangler/
 .dev.vars
 
+# Local dev storage (lab reports devStorage driver)
+.data/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

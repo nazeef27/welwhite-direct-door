@@ -2,13 +2,17 @@ import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import logo from "@/assets/welwhite-logo.asset.json";
 
+// "/#section" (not "#section") so these still work from pages other than the
+// homepage, like /lab-reports — the browser navigates to "/" then jumps to
+// the anchor, instead of doing nothing on the current page.
 const links = [
-  { label: "Home", href: "#home" },
-  { label: "Our Milk", href: "#our-milk" },
-  { label: "Our Journey", href: "#journey" },
-  { label: "Our Bottle", href: "#bottle" },
-  { label: "Delivery", href: "#delivery" },
-  { label: "FAQ", href: "#faq" },
+  { label: "Home", href: "/#home" },
+  { label: "Our Milk", href: "/#our-milk" },
+  { label: "Our Journey", href: "/#journey" },
+  { label: "Our Bottle", href: "/#bottle" },
+  { label: "Delivery", href: "/#delivery" },
+  { label: "FAQ", href: "/#faq" },
+  { label: "Lab Reports", href: "/lab-reports" },
 ];
 
 export const WHATSAPP = "https://wa.me/919542793470";
@@ -38,7 +42,7 @@ export function Nav() {
           scrolled ? "py-2.5" : "py-3.5"
         }`}
       >
-        <a href="#home" className="flex min-w-0 items-center gap-3">
+        <a href="/#home" className="flex min-w-0 items-center gap-3">
           <img
             src={logo.url}
             alt="Welwhite — farm fresh raw milk"
@@ -119,7 +123,6 @@ export function Nav() {
               </a>
             </li>
           </ul>
-
         </div>
       )}
     </header>
