@@ -136,39 +136,40 @@ function LabReportsPage() {
 
             {!loadingList && !listError && selected && (
               <div className="card-fine overflow-hidden rounded-2xl">
-                <div className="flex flex-wrap items-center justify-between gap-3 border-b border-border/60 bg-cream-soft/60 px-6 py-4">
+                <div className="border-b border-border/60 bg-cream-soft/60 px-6 py-4">
                   <p className="text-sm font-medium text-primary">
                     {selected === today ? "Today's report — " : "Report — "}
                     {formatDisplayDate(selected)}
                   </p>
-                  {blobUrl && (
-                    <a
-                      href={blobUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-xs font-medium uppercase tracking-wide text-gold hover:text-primary"
-                    >
-                      Open in new tab
-                    </a>
-                  )}
                 </div>
-                <div className="h-[70vh] min-h-[420px] bg-muted">
+                {/* A big "view" button instead of an embedded PDF preview — mobile
+                    browsers (notably Android Chrome) don't render blob: PDFs inline
+                    inside an iframe, they just show a generic file placeholder. A
+                    button that opens the same blob URL works identically everywhere. */}
+                <div className="flex min-h-[320px] flex-col items-center justify-center gap-5 px-6 py-16 text-center">
                   {loadingFile && (
-                    <div className="flex h-full items-center justify-center gap-2 text-muted-foreground">
-                      <Loader2 className="h-5 w-5 animate-spin" /> Loading PDF…
+                    <div className="flex items-center gap-2 text-muted-foreground">
+                      <Loader2 className="h-5 w-5 animate-spin" /> Loading report…
                     </div>
                   )}
                   {!loadingFile && fileError && (
-                    <div className="flex h-full items-center justify-center text-sm text-muted-foreground">
-                      {fileError}
-                    </div>
+                    <p className="text-sm text-muted-foreground">{fileError}</p>
                   )}
                   {!loadingFile && !fileError && blobUrl && (
-                    <iframe
-                      title={`Lab report ${selected}`}
-                      src={blobUrl}
-                      className="h-full w-full"
-                    />
+                    <>
+                      <span className="inline-flex h-14 w-14 items-center justify-center rounded-2xl border border-gold/25 bg-gold/5">
+                        <FileText className="h-6 w-6 text-gold" strokeWidth={1.5} />
+                      </span>
+                      <p className="text-sm text-muted-foreground">PDF report ready to view</p>
+                      <a
+                        href={blobUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn-premium inline-flex items-center gap-2 rounded-xl bg-primary px-7 py-3 text-sm font-medium text-primary-foreground shadow-soft hover:bg-secondary"
+                      >
+                        View Report
+                      </a>
+                    </>
                   )}
                 </div>
               </div>
