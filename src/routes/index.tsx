@@ -145,7 +145,13 @@ function Index() {
 
           <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-6 sm:px-8 lg:grid-cols-2 lg:gap-20 lg:px-10">
             <div>
-              <Reveal>
+              {/* Plain div, not <Reveal> — this is the hero's own headline text,
+                  and on mobile our new quick-action buttons push it low enough
+                  on first load that Reveal's scroll-triggered fade-in wouldn't
+                  show it until the visitor scrolled. It should always be visible
+                  immediately. (Desktop is unaffected either way — this text was
+                  already fully in view there on load, so Reveal never delayed it.) */}
+              <div>
                 <Eyebrow>Farm Fresh Raw Milk — Hyderabad</Eyebrow>
                 <h1 className="mt-6 text-[2.6rem] leading-[1.05] text-primary sm:text-5xl lg:text-[4.1rem]">
                   Direct our dairy
@@ -170,7 +176,7 @@ function Index() {
                     Explore Our Milk
                   </a>
                 </div>
-              </Reveal>
+              </div>
             </div>
 
             <Reveal delay={140} className="order-first lg:order-last">
