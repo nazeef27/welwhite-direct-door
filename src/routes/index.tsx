@@ -7,7 +7,7 @@ import {
 } from "@/components/ui/accordion";
 import { Nav, WHATSAPP, EMAIL } from "@/components/site/Nav";
 import { Reveal } from "@/components/site/Reveal";
-import logo from "@/assets/welwhite-logo.asset.json";
+import logo from "@/assets/welwhite-logo-full-color.png";
 import heroBottle from "@/assets/hero-bottle.jpg";
 import bottleSpec from "@/assets/bottle-spec.jpg";
 import farm from "@/assets/farm.jpg";
@@ -624,10 +624,10 @@ function Index() {
           <div className="grid gap-10 md:grid-cols-3 lg:gap-12">
             <div>
               <img
-                src={logo.url}
+                src={logo}
                 alt="Welwhite — farm fresh raw milk"
                 loading="lazy"
-                width={200}
+                width={225}
                 height={150}
                 className="h-16 w-auto"
               />

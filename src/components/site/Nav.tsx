@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
-import logo from "@/assets/welwhite-logo.asset.json";
+import logo from "@/assets/welwhite-logo-full-color.png";
 
 // "/#section" (not "#section") so these still work from pages other than the
 // homepage, like /lab-reports — the browser navigates to "/" then jumps to
@@ -44,12 +44,12 @@ export function Nav() {
       >
         <a href="/#home" className="flex min-w-0 items-center gap-3">
           <img
-            src={logo.url}
+            src={logo}
             alt="Welwhite — farm fresh raw milk"
             className={`w-auto shrink-0 transition-all duration-500 ${
               scrolled ? "h-10 sm:h-11" : "h-11 sm:h-13"
             }`}
-            width={160}
+            width={180}
             height={120}
           />
           <span className="sr-only">Welwhite</span>
