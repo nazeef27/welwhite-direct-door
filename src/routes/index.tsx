@@ -126,7 +126,7 @@ function Index() {
 
           {/* Mobile-only quick actions. Hidden at lg+ so desktop is untouched —
               same breakpoint the header already uses to switch mobile/desktop nav. */}
-          <div className="relative z-10 mx-auto mb-6 flex max-w-7xl gap-3 px-6 sm:px-8 lg:hidden">
+          <div className="relative z-10 mx-auto -mt-6 mb-6 flex max-w-7xl gap-3 px-6 sm:px-8 lg:hidden">
             <a
               href="/lab-reports"
               className="flex flex-1 items-center justify-center gap-2 rounded-xl border border-gold/25 bg-cream-soft/80 px-4 py-3 text-xs font-medium uppercase tracking-wide text-primary shadow-hairline transition-colors hover:border-gold/45"
