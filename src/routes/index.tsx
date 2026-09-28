@@ -22,6 +22,7 @@ import {
   MapPin,
   Sparkles,
   ArrowRight,
+  FileText,
 } from "lucide-react";
 
 const TITLE = "Welwhite | Farm Fresh Raw Milk Delivered in Hyderabad";
@@ -122,6 +123,26 @@ function Index() {
         >
           <div className="pointer-events-none absolute -right-40 -top-40 h-[34rem] w-[34rem] rounded-full bg-gold-soft/15 blur-3xl" />
           <div className="pointer-events-none absolute -left-52 bottom-0 h-[26rem] w-[26rem] rounded-full bg-leaf/10 blur-3xl" />
+
+          {/* Mobile-only quick actions. Hidden at lg+ so desktop is untouched —
+              same breakpoint the header already uses to switch mobile/desktop nav. */}
+          <div className="relative z-10 mx-auto mb-6 flex max-w-7xl gap-3 px-6 sm:px-8 lg:hidden">
+            <a
+              href="/lab-reports"
+              className="flex flex-1 items-center justify-center gap-2 rounded-xl border border-gold/25 bg-cream-soft/80 px-4 py-3 text-xs font-medium uppercase tracking-wide text-primary shadow-hairline transition-colors hover:border-gold/45"
+            >
+              <FileText className="h-4 w-4 text-gold" /> Lab Report
+            </a>
+            <a
+              href={wa("Hello Welwhite, I would like to enquire about raw milk delivery.")}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex flex-1 items-center justify-center gap-2 rounded-xl border border-gold/25 bg-cream-soft/80 px-4 py-3 text-xs font-medium uppercase tracking-wide text-primary shadow-hairline transition-colors hover:border-gold/45"
+            >
+              <Phone className="h-4 w-4 text-gold" /> Order / Inquiry
+            </a>
+          </div>
+
           <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-6 sm:px-8 lg:grid-cols-2 lg:gap-20 lg:px-10">
             <div>
               <Reveal>
