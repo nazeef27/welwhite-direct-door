@@ -12,7 +12,7 @@ const links = [
   { label: "Our Bottle", href: "/#bottle" },
   { label: "Delivery", href: "/#delivery" },
   { label: "FAQ", href: "/#faq" },
-  { label: "Daily Lab Reports", href: "/lab-reports" },
+  { label: "View Daily Lab Reports", href: "/lab-reports" },
 ];
 
 export const WHATSAPP = "https://wa.me/919542793470";
@@ -56,12 +56,12 @@ export function Nav() {
         </a>
 
         <div className="flex items-center gap-2">
-          <ul className="hidden items-center gap-8 lg:flex">
+          <ul className="hidden items-center gap-5 lg:flex xl:gap-8">
             {links.map((l) => (
               <li key={l.href}>
                 <a
                   href={l.href}
-                  className="relative text-[0.82rem] font-medium uppercase tracking-[0.11em] text-foreground/75 transition-colors duration-300 hover:text-primary after:absolute after:-bottom-1.5 after:left-0 after:h-px after:w-0 after:bg-gold after:transition-all after:duration-300 hover:after:w-full"
+                  className="relative whitespace-nowrap text-[0.78rem] font-medium uppercase tracking-[0.07em] text-foreground/75 transition-colors duration-300 hover:text-primary after:absolute after:-bottom-1.5 after:left-0 after:h-px after:w-0 after:bg-gold after:transition-all after:duration-300 hover:after:w-full xl:text-[0.82rem] xl:tracking-[0.11em]"
                 >
                   {l.label}
                 </a>

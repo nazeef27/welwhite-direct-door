@@ -129,15 +129,15 @@ function Index() {
           <div className="relative z-10 mx-auto -mt-6 mb-6 flex max-w-7xl gap-3 px-6 sm:px-8 lg:hidden">
             <a
               href="/lab-reports"
-              className="flex flex-1 items-center justify-center gap-1.5 rounded-xl border border-gold/25 bg-cream-soft/80 px-2 py-3 text-[0.7rem] font-medium uppercase tracking-normal text-primary shadow-hairline transition-colors hover:border-gold/45"
+              className="flex flex-1 items-center justify-center gap-1 rounded-xl border border-gold/25 bg-cream-soft/80 px-1.5 py-3 text-[0.625rem] font-medium uppercase tracking-normal text-primary shadow-hairline transition-colors hover:border-gold/45"
             >
-              <FileText className="h-4 w-4 text-gold" /> Daily Lab Reports
+              <FileText className="h-4 w-4 text-gold" /> View Daily Lab Reports
             </a>
             <a
               href={wa("Hello Welwhite, I would like to inquire about raw milk delivery.")}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex flex-1 items-center justify-center gap-1.5 rounded-xl border border-gold/25 bg-cream-soft/80 px-2 py-3 text-[0.7rem] font-medium uppercase tracking-normal text-primary shadow-hairline transition-colors hover:border-gold/45"
+              className="flex flex-1 items-center justify-center gap-1 rounded-xl border border-gold/25 bg-cream-soft/80 px-1.5 py-3 text-[0.625rem] font-medium uppercase tracking-normal text-primary shadow-hairline transition-colors hover:border-gold/45"
             >
               <Phone className="h-4 w-4 text-gold" /> Order / Inquiry
             </a>
