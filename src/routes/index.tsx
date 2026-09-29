@@ -134,7 +134,7 @@ function Index() {
               <FileText className="h-4 w-4 text-gold" /> Lab Report
             </a>
             <a
-              href={wa("Hello Welwhite, I would like to enquire about raw milk delivery.")}
+              href={wa("Hello Welwhite, I would like to inquire about raw milk delivery.")}
               target="_blank"
               rel="noopener noreferrer"
               className="flex flex-1 items-center justify-center gap-2 rounded-xl border border-gold/25 bg-cream-soft/80 px-4 py-3 text-xs font-medium uppercase tracking-wide text-primary shadow-hairline transition-colors hover:border-gold/45"
@@ -165,12 +165,12 @@ function Index() {
                 </p>
                 <div className="mt-10 flex flex-col gap-3 sm:flex-row">
                   <a
-                    href={wa("Hello Welwhite, I would like to enquire about raw milk delivery.")}
+                    href={wa("Hello Welwhite, I would like to inquire about raw milk delivery.")}
                     target="_blank"
                     rel="noopener noreferrer"
                     className={btnPrimary}
                   >
-                    Order / Enquire <ArrowRight className="h-4 w-4" />
+                    Order / Inquiry <ArrowRight className="h-4 w-4" />
                   </a>
                   <a href="#our-milk" className={btnGhost}>
                     Explore Our Milk
@@ -503,7 +503,7 @@ function Index() {
                       +91 95427 93470
                     </a>
                     <a
-                      href={mailto("Welwhite raw milk enquiry")}
+                      href={mailto("Welwhite raw milk inquiry")}
                       className="flex items-center gap-3 break-all text-primary transition-colors hover:text-gold"
                     >
                       <Mail className="h-4 w-4 shrink-0 text-gold" strokeWidth={1.5} />
@@ -574,7 +574,7 @@ function Index() {
               <p className="text-sm text-muted-foreground">
                 Still have a question? Write to us at{" "}
                 <a
-                  href={mailto("Welwhite enquiry")}
+                  href={mailto("Welwhite inquiry")}
                   className="break-all font-medium text-primary underline decoration-gold/40 underline-offset-4 transition-colors hover:text-gold"
                 >
                   {EMAIL}
@@ -607,7 +607,7 @@ function Index() {
                   Start a Conversation <ArrowRight className="h-4 w-4" />
                 </a>
                 <a
-                  href={mailto("Welwhite enquiry")}
+                  href={mailto("Welwhite inquiry")}
                   className="btn-premium inline-flex w-full items-center justify-center gap-2 rounded-xl border border-primary-foreground/25 px-8 py-4 text-sm font-medium tracking-wide text-primary-foreground hover:border-gold-soft/50 hover:bg-primary-foreground/[0.06] sm:w-auto"
                 >
                   <Mail className="h-4 w-4" /> Email Us

@@ -74,7 +74,7 @@ export function Nav() {
             rel="noopener noreferrer"
             className="btn-premium ml-5 hidden rounded-xl bg-primary px-5 py-2.5 text-sm font-medium tracking-wide text-primary-foreground shadow-soft hover:bg-secondary hover:shadow-lift sm:inline-flex"
           >
-            Order / Enquire
+            Order / Inquiry
           </a>
           <button
             type="button"
@@ -110,7 +110,7 @@ export function Nav() {
                 onClick={() => setOpen(false)}
                 className="block rounded-xl bg-primary px-5 py-3.5 text-center text-sm font-medium tracking-wide text-primary-foreground shadow-soft"
               >
-                Order / Enquire
+                Order / Inquiry
               </a>
             </li>
             <li className="pb-4 text-center">
