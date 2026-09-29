@@ -12,7 +12,7 @@ const links = [
   { label: "Our Bottle", href: "/#bottle" },
   { label: "Delivery", href: "/#delivery" },
   { label: "FAQ", href: "/#faq" },
-  { label: "Lab Reports", href: "/lab-reports" },
+  { label: "Daily Lab Reports", href: "/lab-reports" },
 ];
 
 export const WHATSAPP = "https://wa.me/919542793470";
