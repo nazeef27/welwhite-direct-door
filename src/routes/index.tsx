@@ -23,6 +23,9 @@ import {
   Sparkles,
   ArrowRight,
   FileText,
+  FlaskConical,
+  GlassWater,
+  ShieldCheck,
 } from "lucide-react";
 
 const TITLE = "Welwhite | Farm Fresh Raw Milk Delivered in Hyderabad";
@@ -201,15 +204,28 @@ function Index() {
             </Reveal>
           </div>
 
-          <Reveal delay={200} className="relative mx-auto mt-16 max-w-4xl px-6 sm:px-8 lg:px-10">
-            <ul className="grid grid-cols-1 divide-y divide-border/70 overflow-hidden rounded-2xl border border-border/70 bg-cream-soft/80 text-center shadow-hairline sm:grid-cols-3 sm:divide-x sm:divide-y-0">
-              {["Raw Milk", "Glass Bottle", "Home Delivery"].map((t) => (
-                <li key={t} className="px-6 py-6 transition-colors hover:bg-gold/5">
-                  <span className="eyebrow text-primary">{t}</span>
-                </li>
+          <div className="relative mx-auto mt-16 max-w-7xl px-6 sm:px-8 lg:px-10">
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-5">
+              {[
+                { icon: Milk, t: "Raw Milk" },
+                { icon: FlaskConical, t: "Daily Lab Tested, Full Transparency" },
+                { icon: GlassWater, t: "Reusable Glass Bottle" },
+                { icon: ShieldCheck, t: "FSSAI Approved" },
+                { icon: Truck, t: "Delivered To Your Doorstep" },
+              ].map((item, i) => (
+                <Reveal
+                  key={item.t}
+                  delay={i * 90}
+                  className="card-fine flex flex-col items-center gap-3 rounded-2xl px-5 py-7 text-center hover:-translate-y-1"
+                >
+                  <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-gold/25 bg-gold/5">
+                    <item.icon className="h-4 w-4 text-gold" strokeWidth={1.5} />
+                  </span>
+                  <p className="text-sm font-medium leading-snug text-primary">{item.t}</p>
+                </Reveal>
               ))}
-            </ul>
-          </Reveal>
+            </div>
+          </div>
         </section>
 
         <div className="rule-gold mx-auto max-w-7xl" />
