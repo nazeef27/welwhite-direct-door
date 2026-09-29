@@ -591,7 +591,7 @@ function Index() {
                 Still have a question? Write to us at{" "}
                 <a
                   href={mailto("Welwhite inquiry")}
-                  className="break-all font-medium text-primary underline decoration-gold/40 underline-offset-4 transition-colors hover:text-gold"
+                  className="font-medium text-primary underline decoration-gold/40 underline-offset-4 transition-colors hover:text-gold"
                 >
                   {EMAIL}
                 </a>
