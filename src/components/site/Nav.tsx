@@ -7,12 +7,12 @@ import logo from "@/assets/welwhite-logo-full-color.png";
 // the anchor, instead of doing nothing on the current page.
 const links = [
   { label: "Home", href: "/#home" },
+  { label: "About Welwhite", href: "/#about" },
   { label: "Our Milk", href: "/#our-milk" },
-  { label: "Our Journey", href: "/#journey" },
+  { label: "Daily Lab Reports", href: "/lab-reports" },
   { label: "Our Bottle", href: "/#bottle" },
   { label: "Delivery", href: "/#delivery" },
   { label: "FAQ", href: "/#faq" },
-  { label: "Daily Lab Reports", href: "/lab-reports" },
 ];
 
 export const WHATSAPP = "https://wa.me/919542793470";
@@ -56,12 +56,12 @@ export function Nav() {
         </a>
 
         <div className="flex items-center gap-2">
-          <ul className="hidden items-center gap-8 lg:flex">
+          <ul className="hidden items-center gap-4 lg:flex xl:gap-8">
             {links.map((l) => (
               <li key={l.href}>
                 <a
                   href={l.href}
-                  className="relative text-[0.82rem] font-medium uppercase tracking-[0.11em] text-foreground/75 transition-colors duration-300 hover:text-primary after:absolute after:-bottom-1.5 after:left-0 after:h-px after:w-0 after:bg-gold after:transition-all after:duration-300 hover:after:w-full"
+                  className="relative whitespace-nowrap text-[0.72rem] font-medium uppercase tracking-[0.06em] text-foreground/75 transition-colors duration-300 hover:text-primary after:absolute after:-bottom-1.5 after:left-0 after:h-px after:w-0 after:bg-gold after:transition-all after:duration-300 hover:after:w-full xl:text-[0.82rem] xl:tracking-[0.11em]"
                 >
                   {l.label}
                 </a>
@@ -72,7 +72,7 @@ export function Nav() {
             href={WHATSAPP}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-premium ml-5 hidden rounded-xl bg-primary px-5 py-2.5 text-sm font-medium tracking-wide text-primary-foreground shadow-soft hover:bg-secondary hover:shadow-lift sm:inline-flex"
+            className="btn-premium ml-3 hidden whitespace-nowrap rounded-xl bg-primary px-4 py-2.5 text-sm font-medium tracking-wide text-primary-foreground shadow-soft hover:bg-secondary hover:shadow-lift sm:inline-flex xl:ml-5 xl:px-5"
           >
             Order / Inquiry
           </a>

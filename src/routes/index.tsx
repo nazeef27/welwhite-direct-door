@@ -536,7 +536,7 @@ function Index() {
         </section>
 
         {/* ABOUT */}
-        <section className="border-y border-border/60 bg-cream py-20 sm:py-24 lg:py-32">
+        <section id="about" className="border-y border-border/60 bg-cream py-20 sm:py-24 lg:py-32">
           <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-10">
             <SectionHead
               eyebrow="About Welwhite"
