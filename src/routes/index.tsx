@@ -26,6 +26,7 @@ import {
   FlaskConical,
   BottleWine,
   ShieldCheck,
+  Eye,
 } from "lucide-react";
 
 const TITLE = "Welwhite | Farm Fresh Raw Milk Delivered in Hyderabad";
@@ -238,9 +239,11 @@ function Index() {
               title="Why Welwhite?"
               subtitle="Simple principles behind every bottle."
             />
-            <div className="mt-14 grid gap-5 sm:grid-cols-2 sm:gap-6 lg:mt-16 lg:grid-cols-4">
+            <div className="mt-14 grid gap-5 sm:grid-cols-2 sm:gap-6 lg:mt-16 lg:grid-cols-3">
               {[
                 { icon: Leaf, t: "Farm Fresh", d: "Milk sourced and prepared with a focus on freshness." },
+                { icon: FlaskConical, t: "Lab Tested", d: "Every batch tested. Every report available." },
+                { icon: Eye, t: "Nothing Hidden", d: "Your family deserves to know. We show you the report, not just the claim." },
                 { icon: Milk, t: "Glass Bottle", d: "A premium reusable glass-bottle approach instead of conventional plastic packaging." },
                 { icon: Snowflake, t: "Cold Care", d: "Milk is handled and refrigerated with care." },
                 { icon: Truck, t: "Direct Delivery", d: "Our goal is to connect the dairy directly with homes." },
