@@ -384,10 +384,7 @@ function Index() {
               )}
             </div>
 
-            <p className="mt-12 inline-flex items-center gap-2.5 border-t border-primary-foreground/15 pt-6 text-sm text-primary-foreground/75">
-              <Snowflake className="h-4 w-4 text-gold-soft" />
-              Recommended storage: 4°C (40°F) or below
-            </p>
+            <div className="mt-12 border-t border-primary-foreground/15 pt-6" />
           </div>
         </section>
 
