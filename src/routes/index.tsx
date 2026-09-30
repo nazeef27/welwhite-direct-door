@@ -383,8 +383,6 @@ function Index() {
                 ),
               )}
             </div>
-
-            <div className="mt-12 border-t border-primary-foreground/15 pt-6" />
           </div>
         </section>
 
