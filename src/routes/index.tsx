@@ -345,41 +345,6 @@ function Index() {
           </div>
         </section>
 
-        {/* JOURNEY */}
-        <section id="journey" className="bg-background py-20 sm:py-24 lg:py-32">
-          <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-10">
-            <SectionHead
-              eyebrow="Our Journey"
-              title={
-                <>
-                  From our dairy
-                  <br />
-                  <span className="font-normal italic text-gold">to your doorstep.</span>
-                </>
-              }
-            />
-            <ol className="mt-14 grid gap-10 sm:grid-cols-2 lg:mt-20 lg:grid-cols-4 lg:gap-8">
-              {[
-                { n: "01", t: "Source", d: "Milk begins at the dairy." },
-                { n: "02", t: "Handle", d: "Milk is handled carefully and kept refrigerated." },
-                { n: "03", t: "Bottle", d: "Prepared in the Welwhite glass-bottle format." },
-                { n: "04", t: "Deliver", d: "Delivered directly to homes across Hyderabad." },
-              ].map((s, i) => (
-                <Reveal key={s.n} delay={i * 110} className="group relative lg:pr-6">
-                  <span className="font-display text-[2.75rem] leading-none text-gold/45 transition-colors duration-500 group-hover:text-gold/70">
-                    {s.n}
-                  </span>
-                  <h3 className="mt-5 text-base font-medium uppercase tracking-[0.2em] text-primary">
-                    {s.t}
-                  </h3>
-                  <p className="mt-3 text-sm leading-[1.7] text-muted-foreground">{s.d}</p>
-                  <span className="mt-7 block h-px w-full bg-gradient-to-r from-gold/45 to-transparent" />
-                </Reveal>
-              ))}
-            </ol>
-          </div>
-        </section>
-
         {/* COLD & CARE */}
         <section className="relative overflow-hidden bg-primary py-20 text-primary-foreground sm:py-24 lg:py-32">
           <img
@@ -658,7 +623,6 @@ function Index() {
               <ul className="mt-5 space-y-3 text-sm text-muted-foreground">
                 {[
                   { l: "Our Milk", h: "#our-milk" },
-                  { l: "Our Journey", h: "#journey" },
                   { l: "Our Bottle", h: "#bottle" },
                   { l: "Delivery", h: "#delivery" },
                   { l: "FAQ", h: "#faq" },
