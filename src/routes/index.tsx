@@ -336,8 +336,11 @@ function Index() {
                 <div className="min-w-0">
                   <h3 className="text-2xl text-primary">Raw Milk Care</h3>
                   <p className="mt-3 max-w-2xl text-sm leading-[1.75] text-muted-foreground sm:text-base">
-                    Keep refrigerated at 4°C (40°F) or below. Because this is raw milk,
-                    boil before consuming.
+                    100% Raw. No Additives or Preservatives.
+                    <br />
+                    Keep refrigerated at 4°C or below to preserve its natural freshness.
+                    <br />
+                    Boil before consuming.
                   </p>
                 </div>
               </div>
