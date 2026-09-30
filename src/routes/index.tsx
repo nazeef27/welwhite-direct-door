@@ -622,7 +622,10 @@ function Index() {
               <h3 className="eyebrow text-primary">Explore</h3>
               <ul className="mt-5 space-y-3 text-sm text-muted-foreground">
                 {[
+                  { l: "Home", h: "#home" },
+                  { l: "About Welwhite", h: "#about" },
                   { l: "Our Milk", h: "#our-milk" },
+                  { l: "Daily Lab Reports", h: "/lab-reports" },
                   { l: "Our Bottle", h: "#bottle" },
                   { l: "Delivery", h: "#delivery" },
                   { l: "FAQ", h: "#faq" },
