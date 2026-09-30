@@ -9,7 +9,6 @@ import { Nav, WHATSAPP, EMAIL } from "@/components/site/Nav";
 import { Reveal } from "@/components/site/Reveal";
 import logo from "@/assets/welwhite-logo-full-color.png";
 import heroBottle from "@/assets/hero-bottle.jpg";
-import bottleSpec from "@/assets/bottle-spec.jpg";
 import farm from "@/assets/farm.jpg";
 import {
   Milk,
@@ -292,15 +291,14 @@ function Index() {
                   delay={i * 120}
                   className="card-fine group flex flex-col overflow-hidden rounded-3xl"
                 >
-                  <div className="relative flex items-center justify-center overflow-hidden bg-gradient-to-b from-cream-soft to-cream px-8 py-12">
-                    <span className="pointer-events-none absolute inset-x-10 bottom-8 h-px bg-gradient-to-r from-transparent via-gold/25 to-transparent" />
+                  <div className="relative aspect-[4/5] overflow-hidden">
                     <img
-                      src={bottleSpec}
-                      alt={`${p.t} in a 1 litre Welwhite branded glass bottle`}
+                      src={heroBottle}
+                      alt={`${p.t} — Welwhite 1 litre glass bottle in a green pasture`}
                       loading="lazy"
-                      width={928}
-                      height={1152}
-                      className="h-60 w-auto object-contain drop-shadow-[0_18px_28px_rgba(24,52,29,0.12)] transition-transform duration-700 ease-out group-hover:scale-[1.04]"
+                      width={1024}
+                      height={1280}
+                      className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]"
                     />
                   </div>
                   <div className="flex flex-1 flex-col border-t border-border/60 p-7 sm:p-9">
@@ -436,11 +434,11 @@ function Index() {
                 <div className="pointer-events-none absolute -inset-3 rounded-[1.75rem] border border-gold/20" />
                 <div className="relative overflow-hidden rounded-3xl border border-border/70 bg-cream-soft shadow-lift">
                   <img
-                    src={bottleSpec}
-                    alt="Welwhite 1 litre reusable glass milk bottle with golden cap and the Welwhite label"
+                    src={heroBottle}
+                    alt="Welwhite 1 litre glass milk bottle with golden cap in a green pasture"
                     loading="lazy"
-                    width={928}
-                    height={1152}
+                    width={1024}
+                    height={1280}
                     className="h-full w-full object-cover"
                   />
                 </div>
